@@ -5,7 +5,7 @@ import mysql.connector
 
 dbase = "schools"
 
-# (1 = Yes, 2 = No)
+# (1 = Yes, 0 = No)
 tables = [["school_details", 1], ["ratings", 0],
           ["ks2_performance", 0], ["ks4_performance", 1], ["ks5_performance", 0],
           ["financials", 0]
