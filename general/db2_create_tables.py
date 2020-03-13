@@ -6,30 +6,12 @@ import mysql.connector
 dbase = "schools"
 
 # (1 = Yes, 0 = No)
-tables = [["school_details", 1], ["ratings", 0],
-          ["ks2_performance", 0], ["ks4_performance", 1], ["ks5_performance", 0],
+tables = [["school_details", 1], ["ratings", 1],
+          ["ks2_performance", 0], ["ks4_performance", 0], ["ks5_performance", 0],
           ["financials", 0]
           ]
 
 mydb = ""
-
-
-def connect_sql():
-    global mydb
-
-    mydb = mysql.connector.connect(
-        host="localhost",
-        user="*****",
-        passwd="***************",
-        database=dbase
-    )
-
-
-def create_table(table, columns):
-    mycursor = mydb.cursor()
-    mycursor.execute("CREATE TABLE " + table + "(" + columns + ")")
-
-    print(table + " table created!")
 
 
 def get_columns(table):
@@ -42,6 +24,8 @@ def get_columns(table):
                    "city VARCHAR(255), "
                    "postcode VARCHAR(10), "
                    "status VARCHAR(2), "
+                   "rating VARCHAR(30), "
+                   "inspect_date VARCHAR(8), "
                    "date_opened VARCHAR(8), "
                    "date_closed VARCHAR(8), "
                    "school_type VARCHAR(50), "
@@ -62,7 +46,7 @@ def get_columns(table):
     elif table == "ratings":
         columns = ("urn VARCHAR(10) NOT NULL, "
                    "rating VARCHAR(30), "
-                   "inspect_date TIMESTAMP, "
+                   "inspect_date VARCHAR(8), "
                    "timestamp TIMESTAMP, "
                    "PRIMARY KEY (urn, inspect_date)"
                    )
@@ -145,6 +129,24 @@ def get_columns(table):
         print("Unrecognised table: " + table)
 
     return columns
+
+
+def create_table(table, columns):
+    mycursor = mydb.cursor()
+    mycursor.execute("CREATE TABLE " + table + "(" + columns + ")")
+
+    print(table + " table created!")
+
+
+def connect_sql():
+    global mydb
+
+    mydb = mysql.connector.connect(
+        host="localhost",
+        user="waiky",
+        passwd="Programallday1!",
+        database=dbase
+    )
 
 
 def close_connection():
