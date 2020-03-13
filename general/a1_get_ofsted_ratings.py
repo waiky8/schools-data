@@ -28,7 +28,7 @@ def get_rating():
 
     for school in school_details.find_all(["time", "strong"]):
         if school.name == "time":
-            inspect_date = datetime.datetime.strptime(school.text, "%d %B %Y")
+            inspect_date = str(datetime.datetime.strptime(school.text, "%d %B %Y"))[:10].replace("-", "")
         elif school.name == "strong":
             rating = school.text
             write_data()

@@ -24,8 +24,8 @@ def connect_sql():
 
     mydb = mysql.connector.connect(
         host="localhost",
-        user="*****",
-        passwd="***************",
+        user="waiky",
+        passwd="Programallday1!",
         database=dbase
     )
 
@@ -53,7 +53,11 @@ def write_table(table):
     val = values
     print(sql, val)
 
-    mycursor.execute(sql, val)
+    try:
+        mycursor.execute(sql, val)
+    except Exception as e:
+        print(e)
+
     mydb.commit()
 
 
