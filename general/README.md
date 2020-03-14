@@ -14,6 +14,8 @@ Here are the related database schemas containing general info and ratings for th
                    "city VARCHAR(255), "
                    "postcode VARCHAR(10), "
                    "status VARCHAR(2), "
+                   "rating VARCHAR(30), "
+                   "inspect_date VARCHAR(8), "
                    "date_opened VARCHAR(8), "
                    "date_closed VARCHAR(8), "
                    "school_type VARCHAR(50), "
@@ -34,7 +36,7 @@ Here are the related database schemas containing general info and ratings for th
     "ratings":
         columns = ("urn VARCHAR(10) NOT NULL, "
                    "rating VARCHAR(30), "
-                   "inspect_date TIMESTAMP, "
+                   "inspect_date VARCHAR(8), "
                    "timestamp TIMESTAMP, "
                    "PRIMARY KEY (urn, inspect_date)"
                    )
