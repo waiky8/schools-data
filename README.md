@@ -3,7 +3,7 @@ If you have kids then at some point you will be interested in finding out the go
 
 Source: https://www.compare-school-performance.service.gov.uk/download-data
 
-I applied ETL technique to extract the relevent data from the csv files and stored them into **mysql** for later consumption - **mysql workbench** was useful in verifying the data during testing. New datasets can be loaded with minimal work.
+I applied ETL technique to extract the relevent data from the csv files and stored them into **mysql** for later consumption - **mysql workbench** was useful to verify the data during testing. New datasets can be loaded with minimal work.
 
 The next phase is visualisation.
 Let's begin...
