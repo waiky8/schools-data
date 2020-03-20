@@ -4,6 +4,8 @@ Input / output csv files:
 
     20xx-20xx_england_spine.xlsx => school_details_20xx.csv
     20xx-20xx_england_spine.xlsx => ofsted_ratings_20xx.csv
+    primary_urls.txt => pri_schools_list.csv => pri_school_websites.csv
+    secondary_urls.txt => sec_schools_list.csv => sec_school_websites.csv
 
 Here are the related database schemas containing general info and ratings for the schools.
 
@@ -39,4 +41,11 @@ Here are the related database schemas containing general info and ratings for th
                    "inspect_date VARCHAR(8), "
                    "timestamp TIMESTAMP, "
                    "PRIMARY KEY (urn, inspect_date)"
+                   )
+
+    "websites":
+        columns = ("urn VARCHAR(10) NOT NULL, "
+                   "website VARCHAR(100), "
+                   "timestamp TIMESTAMP, "
+                   "PRIMARY KEY (urn)"
                    )
