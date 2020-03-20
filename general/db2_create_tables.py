@@ -6,9 +6,9 @@ import mysql.connector
 dbase = "schools"
 
 # (1 = Yes, 0 = No)
-tables = [["school_details", 1], ["ratings", 1],
+tables = [["school_details", 0], ["ratings", 0],
           ["ks2_performance", 0], ["ks4_performance", 0], ["ks5_performance", 0],
-          ["financials", 0]
+          ["financials", 0], ["websites", 1]
           ]
 
 mydb = ""
@@ -125,6 +125,13 @@ def get_columns(table):
                    "PRIMARY KEY (urn, ac_year)"
                    )
 
+    elif table == "websites":
+        columns = ("urn VARCHAR(10) NOT NULL, "
+                   "website VARCHAR(100), "
+                   "timestamp TIMESTAMP, "
+                   "PRIMARY KEY (urn)"
+                   )
+
     else:
         print("Unrecognised table: " + table)
 
@@ -143,8 +150,8 @@ def connect_sql():
 
     mydb = mysql.connector.connect(
         host="localhost",
-        user="*****",
-        passwd="***************",
+        user="waiky",
+        passwd="Programallday1!",
         database=dbase
     )
 
