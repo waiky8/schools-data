@@ -14,7 +14,7 @@ dbase = "schools"
 
 tables = ["websites"]
 
-r_urn = r_website = ""
+r_name = r_urn = r_website = ""
 columns = values = now = num = ""
 mydb = f_in = ""
 
