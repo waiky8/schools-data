@@ -3,7 +3,7 @@ For those interested in schools data such as ratings, performance and what good 
 
 Source: https://www.compare-school-performance.service.gov.uk/download-data
 
-I used **ETL** technique to extract the relevent data from the csv files and stored them into **mysql** for later consumption - I found **mysql workbench** to be handy during testing. New datasets can also be loaded with minimal work.
+I used **ETL** to extract the relevent data and stored them into **mysql** - I found **mysql workbench** to be very handy during testing. New datasets can also be loaded with minimal work.
 
 The next phase will be visualisation.
 
