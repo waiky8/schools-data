@@ -16,7 +16,7 @@ tables = ["school_details"]
 
 r_urn = r_name = r_street = r_city = r_postcode = r_status = r_rating = r_inspect_date = r_date_opened = \
     r_date_closed = r_school_type = r_primary = r_secondary = r_post16 = r_age_from = r_age_to = r_gender = \
-    r_gender_post16 = r_religion = r_other_urn = r_local_auth = ""
+    r_gender_post16 = r_religion = r_other_urn = r_local_auth = r_website = ""
 
 mydb = f_in = columns = values = now = num = ""
 
@@ -43,12 +43,12 @@ def get_columns(table):
     if table == "school_details":
         columns = "(urn, name, street, city, postcode, status, rating, inspect_date, date_opened, date_closed, " \
                   "school_type, primary_sch, secondary, post16, age_from, age_to, gender, gender_post16, " \
-                  "religion, other_urn, local_auth, timestamp) " \
+                  "religion, other_urn, local_auth, website, timestamp) " \
                   "VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, " \
-                  "%s, %s, %s, %s, %s)"
+                  "%s, %s, %s, %s, %s, %s)"
         values = (r_urn, r_name, r_street, r_city, r_postcode, r_status, r_rating, r_inspect_date, r_date_opened,
                   r_date_closed, r_school_type, r_primary, r_secondary, r_post16, r_age_from, r_age_to, r_gender,
-                  r_gender_post16, r_religion, r_other_urn, r_local_auth, now)
+                  r_gender_post16, r_religion, r_other_urn, r_local_auth, r_website, now)
 
     else:
         print("Unrecognised table: " + table)
@@ -86,7 +86,7 @@ def close_files():
 def main():
     global r_urn, r_name, r_street, r_city, r_postcode, r_status, r_rating, r_inspect_date, r_date_opened, \
         r_date_closed, r_school_type, r_primary, r_secondary, r_post16, r_age_from, r_age_to, r_gender, \
-        r_gender_post16, r_religion, r_other_urn, r_local_auth
+        r_gender_post16, r_religion, r_other_urn, r_local_auth, r_website
     global num
 
     start_time = time.time()
@@ -122,6 +122,7 @@ def main():
             r_religion = row[18]
             r_other_urn = row[19].rstrip(".0")
             r_local_auth = row[20]
+            r_website = ""        # populated in a separate module
 
             if header:
                 header = False
