@@ -12,7 +12,8 @@ print(inp_files)
 
 dbase = "schools"
 
-tables = ["websites"]
+# tables = ["websites"]
+tables = ["school_details"]
 
 r_name = r_urn = r_website = ""
 columns = values = now = num = ""
@@ -24,8 +25,8 @@ def connect_sql():
 
     mydb = mysql.connector.connect(
         host="localhost",
-        user="*****",
-        passwd="***************",
+        user="waiky",
+        passwd="Programallday1!",
         database=dbase
     )
 
@@ -42,6 +43,15 @@ def get_columns(table):
         columns = "(urn, website, timestamp) VALUES (%s, %s, %s)"
         values = (r_urn, r_website, now)
 
+    elif table == "school_details":
+        columns = "website='" + \
+                  r_website + \
+                  "', timestamp='" +\
+                  str(now) +\
+                  "' WHERE urn='" +\
+                  r_urn +\
+                  "'"
+
     else:
         print("Unrecognised table: " + table)
 
@@ -49,7 +59,11 @@ def get_columns(table):
 def write_table(table):
     mycursor = mydb.cursor()
 
-    sql = "REPLACE INTO " + table + " " + columns
+    if table == "websites":
+        sql = "REPLACE INTO websites " + columns
+    elif table == "school_details":
+        sql = "UPDATE school_details SET " + columns
+
     val = values
     print(sql, val)
 
