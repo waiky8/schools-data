@@ -6,9 +6,9 @@ import mysql.connector
 dbase = "schools"
 
 # (1 = Yes, 0 = No)
-tables = [["school_details", 0], ["ratings", 0],
+tables = [["school_details", 1], ["ratings", 0],
           ["ks2_performance", 0], ["ks4_performance", 0], ["ks5_performance", 0],
-          ["financials", 0], ["websites", 1]
+          ["financials", 0], ["websites", 0]
           ]
 
 mydb = ""
@@ -38,6 +38,7 @@ def get_columns(table):
                    "gender_post16 VARCHAR(30), "
                    "religion VARCHAR(255), "
                    "local_auth VARCHAR(10), "
+                   "website VARCHAR(255), "
                    "other_urn VARCHAR(10), "
                    "timestamp TIMESTAMP, "
                    "PRIMARY KEY (urn)"
