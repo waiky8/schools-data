@@ -12,8 +12,8 @@ def connect_sql():
     
     mydb = mysql.connector.connect(
         host="localhost",
-        user="waiky",
-        passwd="Programallday1!"
+        user="******",
+        passwd="******"
     )
 
 
