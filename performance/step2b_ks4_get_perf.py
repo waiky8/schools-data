@@ -6,10 +6,12 @@ import csv
 import datetime
 import time
 
-academic_year = "2018"
+academic_year = "2019"
 
-inp_f = "data/england_ks4final_" + academic_year + ".csv"
-out_f = "data/ks4_perf_" + academic_year + ".csv"
+# inp_f = "data/england_ks4final_" + academic_year + ".csv"
+# out_f = "data/ks4_perf_" + academic_year + ".csv"
+inp_f = "data/england_ks4revised_" + academic_year + ".csv"
+out_f = "data/ks4_revised_perf_" + academic_year + ".csv"
 
 header = ["URN", "KS4 Pupils", "KS4 Boys", "KS4 Girls", "Progress 8", "Progress 8 Boys", "Progress 8 Girls",
           "Attainment 8", "Attainment 8 Boys", "Attainment 8 Girls", "Eng Maths Grade 5",

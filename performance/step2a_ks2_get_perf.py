@@ -6,7 +6,7 @@ import csv
 import datetime
 import time
 
-academic_year = "2018"
+academic_year = "2019"
 
 inp_f = "data/england_ks2final_" + academic_year + ".csv"
 out_f = "data/ks2_perf_" + academic_year + ".csv"

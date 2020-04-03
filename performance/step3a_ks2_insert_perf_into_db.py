@@ -7,7 +7,7 @@ import glob
 import datetime
 import time
 
-inp_files = sorted(glob.glob("data/ks2_perf_*.csv"))
+inp_files = sorted(glob.glob("data/ks2_perf_2019.csv"))
 print(inp_files)
 
 dbase = "schools"
