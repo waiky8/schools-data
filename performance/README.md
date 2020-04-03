@@ -2,8 +2,10 @@
 Input / output csv files:
 
     england_ks2final_20xx.csv => ks2_perf_20xx.csv
-    england_ks3final_20xx.csv => ks2_perf_20xx.csv
-    england_ks5final_20xx.csv => ks2_perf_20xx.csv
+    england_ks4final_20xx.csv => ks4_perf_20xx.csv
+    england_ks4revised_20xx.csv => ks4_revised_perf_20xx.csv
+    england_ks5final_20xx.csv => ks5_perf_20xx.csv
+    england_ks5revised_20xx.csv => ks5_revised_perf_20xx.csv
 
 Here are the related database schemas containing performance data for the schools.
 
