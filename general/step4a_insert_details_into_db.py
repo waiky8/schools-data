@@ -120,7 +120,7 @@ def main():
             r_gender = row[16]
             r_gender_post16 = row[17]
             r_religion = row[18]
-            r_other_urn = row[19].rstrip(".0")
+            r_other_urn = row[19].replace(".0", "")
             r_local_auth = row[20]
             r_website = ""        # populated in a separate module
 
