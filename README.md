@@ -7,3 +7,7 @@ Source: https://www.compare-school-performance.service.gov.uk/download-data
 
 So that's the data part. Next is the fun bit - visualisation.
 
+Due to COVID-19:
+
+"The Government has announced that it will not publish any school or college level educational performance data based on tests, assessments or exams for 2020."
+
