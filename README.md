@@ -1,5 +1,5 @@
 # UK Schools Data
-For those interested in schools data such as ratings, performance or what good schools there are in your area. Currently, the best way is to utilise data provided by ofsted. **beautiful soup** was used to crawl their website as well as levereaging some of the ofsted csv files available. Data processed through **panda dataframes** - significant time expended on research , data cleansing and formatting.
+For those interested in schools data such as ratings, performance or what good schools there are in your area. Currently, the best way is to utilise data provided by ofsted. **beautiful soup** was used to traverse their website as well as levereaging some of the ofsted csv files available. Data processed through **panda dataframes** - significant time expended on research , data cleansing and formatting.
 
 Source: https://www.compare-school-performance.service.gov.uk/download-data
 
