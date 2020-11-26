@@ -5,7 +5,16 @@ Source: https://www.compare-school-performance.service.gov.uk/download-data
 
 **ETL** to extract the relevent data and stored them into **mysql** - designed so that new datasets can be added with minimal work. **mysql workbench** came in handy for data validation during testing.
 
-Note, flowcharts depicting data flow from source to database were created using **y_ed Graph Editor**.
+Note, below flowcharts depicting data flow from source to database were created using **y_ed Graph Editor**.
+
+GENERAL
+![alt text](https://github.com/waiky8/uk-schools-data/blob/master/school_general.png)
+
+PERFORMANCE
+![alt text](https://github.com/waiky8/uk-schools-data/blob/master/school_performance.png)
+
+FINANCIALS
+![alt text](https://github.com/waiky8/uk-schools-data/blob/master/school_financials.png)
 
 So that's the data part. Next is the fun bit - visualisation.
 
